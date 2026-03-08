@@ -17,8 +17,12 @@
 3. 用 Chrome 或 Edge 打开，允许麦克风权限。
 4. 点击「开始听写」，对着设备说话或听老师讲课，英文会实时出现在左侧。
 5. 需要中文时点击「翻译成中文」，右侧会显示翻译结果。
-6. mac在终端运行'''cd /Users/seven/Desktop/translate
-npx serve .'''
+6. mac在终端运行
+   ```
+   cd /Users/seven/Desktop/translate
+npx serve .
+```
+   
 
 **若要用手机/平板在同一 WiFi 下访问**，需用 HTTPS。可先生成自签名证书再启动：
    ```bash
