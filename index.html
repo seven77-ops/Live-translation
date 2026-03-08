@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>课堂实时听讲助手 - 语音转文字 · 英译中</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <div id="secureWarning" class="secure-warning" role="alert" hidden>
+      <strong>无法使用麦克风：</strong>当前不是安全连接，浏览器会禁止麦克风。请在本机改用 <a href="http://localhost:3000">http://localhost:3000</a> 打开（不要用 192.168.x.x）。
+    </div>
+    <header class="header">
+      <h1>课堂实时听讲助手</h1>
+      <p class="subtitle">实时语音转英文 · 一键英译中 · 上课听懂不犯愁</p>
+      <div class="controls">
+        <button type="button" id="btnToggle" class="btn btn-primary" aria-label="开始/停止听写">
+          <span class="btn-icon" aria-hidden="true"></span>
+          <span class="btn-text">开始听写</span>
+        </button>
+        <button type="button" id="btnTranslate" class="btn btn-secondary" disabled>
+          翻译成中文
+        </button>
+        <span class="status" id="status">未开始</span>
+      </div>
+    </header>
+
+    <main class="content">
+      <section class="panel panel-english">
+        <h2>英文原文</h2>
+        <div class="text-box" id="englishText" aria-live="polite">
+          <p class="placeholder">点击「开始听写」后，这里会实时显示老师说的英文。</p>
+        </div>
+      </section>
+      <section class="panel panel-chinese">
+        <h2>中文翻译</h2>
+        <div class="text-box" id="chineseText" aria-live="polite">
+          <p class="placeholder">点击「翻译成中文」即可显示对应中文翻译。</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>使用浏览器麦克风权限进行语音识别，翻译通过联网接口完成。建议使用 Chrome / Edge 以获得最佳体验。</p>
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
