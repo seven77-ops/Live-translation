@@ -20,8 +20,8 @@
 6. mac在终端运行
    ```
    cd /Users/seven/Desktop/translate
-npx serve .
-```
+   npx serve .
+   ```
    
 
 **若要用手机/平板在同一 WiFi 下访问**，需用 HTTPS。可先生成自签名证书再启动：
